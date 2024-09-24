@@ -1,0 +1,86 @@
+# Build Folders (you can keep bin if you'd like, to store dlls, pdbs, etc.)
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code files
+.vscode/
+
+# Visual Studio working files
+.vs/
+.vscode/
+
+# Rider settings
+.idea/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# .NET MAUI specific files
+AppPackages/
+TestResults/
+*.appx
+*.appxbundle
+*.appxupload
+*.msix
+*.msixbundle
+*.msixupload
+*.vsix
+.vsmac/
+
+# JetBrains Rider project files
+.idea/
+
+# Mac files
+.DS_Store
+._*
+
+# Logs
+*.log
+
+# Application Insights
+*.iobj
+*.ipdb
+
+# Azure Pipelines
+*.yml
+
+# Non-deterministic files and folders
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+
+# Configuration files
+appsettings.Development.json
+appsettings.Production.json
+appsettings.Local.json
+
+# Static website cache
+_cache/
+.cache/
