@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Monthy.Views.LessonPage"
+             Title="LessonPage">
+    <VerticalStackLayout>
+        <Label 
+            x:Name="monthLabel"
+            Margin="155"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Entry
+            x:Name="entry"
+            Placeholder="Enter text" />
+        <Button 
+           x:Name="send"
+           Text="Send"
+           VerticalOptions="Center"
+           HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
