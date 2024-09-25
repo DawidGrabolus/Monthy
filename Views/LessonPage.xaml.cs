@@ -20,19 +20,27 @@ public partial class LessonPage : ContentPage
             new Month(12, "grudzieñ")
         };
     private Random random = new Random();
-    private int currentMonthNumber; 
+    private int currentMonthNumber;
+    private int points = 0;
 
     public LessonPage()
     {
         InitializeComponent();
 
-        currentMonthNumber = random.Next(1, 12);
-        monthLabel.Text = Convert.ToString(months[currentMonthNumber].Number);
+        pointsLabel.Text = "Points: 0";
+
+        DrawMonth();
 
         Button send = this.FindByName<Button>("send");
         send.Clicked += OnSendButtonClicked;
     }
 
+    private void DrawMonth()
+    {
+        entry.Text = "";
+        currentMonthNumber = random.Next(1, 12);
+        monthLabel.Text = Convert.ToString(months[currentMonthNumber].Number);
+    }
     private void OnSendButtonClicked(object sender, EventArgs e)
     {
         string userAnswer = entry.Text?.Trim().ToLower();
@@ -43,10 +51,14 @@ public partial class LessonPage : ContentPage
             if (userAnswer == currentMonth.Name.ToLower())
             {
                 DisplayAlert("Result", "Correct!", "OK");
+                DrawMonth();
+                points ++;
+                pointsLabel.Text = "Points: " + points;
             }
             else
             {
-                DisplayAlert("Result", "Incorrect! Try again.", "OK");
+                DisplayAlert("Result", "Incorrect! Try again.\n Right answer: " + currentMonth.Name, "OK");
+                DrawMonth();
             }
         }
     }
